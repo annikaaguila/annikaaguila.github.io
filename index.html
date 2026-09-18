@@ -125,6 +125,19 @@
       radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.06), transparent 55%),
       linear-gradient(155deg, #5a4d38 0%, #362f22 48%, #241f16 100%);
   }
+  .hero-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    animation: kenburns 16s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.09); }
+  }
   .hero-photo::after {
     content: "";
     position: absolute;
@@ -132,6 +145,7 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     opacity: 0.06;
     mix-blend-mode: overlay;
+    pointer-events: none;
   }
   .hero-photo .cap {
     position: absolute;
@@ -155,7 +169,27 @@
     font-family: var(--script);
     font-size: clamp(3rem, 6.4vw, 4.8rem);
     line-height: 1;
-    color: var(--ink);
+    background: linear-gradient(90deg, var(--ink) 0%, var(--rose) 30%, var(--teal) 55%, var(--rose) 80%, var(--ink) 100%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 7s linear infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 250% 50%; }
+  }
+  .flame {
+    display: inline-block;
+    animation: flicker 1.3s infinite ease-in-out;
+    transform-origin: center bottom;
+  }
+  @keyframes flicker {
+    0%, 100% { transform: scale(1) rotate(-3deg); filter: drop-shadow(0 0 4px #ff9d42) drop-shadow(0 0 10px #ff5a1f); }
+    25%      { transform: scale(1.1) rotate(3deg); filter: drop-shadow(0 0 6px #ffd23f) drop-shadow(0 0 14px #ff5a1f); }
+    50%      { transform: scale(0.94) rotate(-4deg); filter: drop-shadow(0 0 3px #ff5a1f) drop-shadow(0 0 8px #ff2d00); }
+    75%      { transform: scale(1.06) rotate(2deg); filter: drop-shadow(0 0 5px #ffd23f) drop-shadow(0 0 12px #ff5a1f); }
   }
   .hero-role {
     font-family: var(--display);
@@ -258,7 +292,21 @@
     position: relative;
     background: linear-gradient(160deg, var(--cream-2) 0%, #e6dcc4 100%);
     overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
+  .portrait:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 34px -18px rgba(43, 38, 32, 0.35);
+  }
+  .portrait img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .portrait:hover img { transform: scale(1.08) rotate(-1deg); }
   .portrait .cap {
     position: absolute;
     bottom: 14px;
@@ -301,6 +349,13 @@
     color: var(--teal);
     border: 1px solid var(--line);
     padding: 7px 14px;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+  .skill-pill:hover {
+    transform: translateY(-4px) scale(1.06);
+    background: var(--rose);
+    color: var(--olive-ink);
+    border-color: var(--rose);
   }
 
   /* ---------- work ---------- */
@@ -310,7 +365,9 @@
   .project {
     padding-block: 34px;
     border-top: 1px solid var(--line);
+    transition: transform 0.3s ease;
   }
+  .project:hover { transform: translateX(4px); }
   .project:last-child { border-bottom: 1px solid var(--line); }
   .project-head {
     display: flex;
@@ -372,6 +429,11 @@
     border-radius: 22px;
     padding: 7px;
     position: relative;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .phone:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 22px 38px -20px rgba(23, 21, 18, 0.55);
   }
   .phone-screen {
     width: 100%;
@@ -447,11 +509,13 @@
     flex-direction: column;
     align-items: center;
     gap: 14px;
-    transition: background 0.15s ease, border-color 0.15s ease;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
   .frame:hover, .frame:focus-visible {
     background: #efe4d4;
     border-color: var(--rose);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 30px -18px rgba(43, 38, 32, 0.3);
   }
   .frame .icon-circle {
     width: 52px;
@@ -526,6 +590,11 @@
   [data-animate].in { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) {
     [data-animate] { opacity: 1; transform: none; transition: none; }
+    .hero-photo img, .hero-copy h1, .flame { animation: none !important; }
+    .hero-copy h1 { background: none; color: var(--ink); }
+    .portrait, .portrait img, .skill-pill, .project, .phone, .frame {
+      transition: none !important;
+    }
   }
 </style>
 </head>
@@ -533,12 +602,12 @@
 
   <header class="site-nav">
     <div class="wrap nav-inner">
-      <a href="#top" class="nav-name">Annika Aguila</a>
+      <a href="#top" class="nav-name">Annika Aguila <span class="flame" aria-hidden="true">🔥</span></a>
       <nav class="links">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#socials">Socials</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">👋 About</a>
+        <a href="#work">🎬 Work</a>
+        <a href="#socials">📱 Socials</a>
+        <a href="#contact">💌 Contact</a>
       </nav>
     </div>
   </header>
@@ -546,17 +615,17 @@
   <main id="top">
     <div class="hero">
       <div class="hero-photo">
-        <span class="cap">Photo — swap in your own</span>
+        <img src="assets/pictures/annikalinkedinphoto.png" alt="Annika Aguila" loading="eager" decoding="async" fetchpriority="high">
       </div>
       <div class="hero-copy">
         <h1>Annika<br>Aguila</h1>
-        <p class="hero-role">Director · Cinematographer · Editor</p>
-        <p class="hero-tagline">Stories built from the ground up — shot list, camera, cut, and sound. Also known to get lost in floral design, photography, and a good notebook.</p>
+        <p class="hero-role">🎥 Director · 🎞️ Cinematographer · ✂️ Editor</p>
+        <p class="hero-tagline">Stories built from the ground up — shot list, camera, cut, and sound. 🎬 Also known to get lost in floral design 🌸, photography 📸, and a good notebook 📓.</p>
         <div class="hero-cta">
-          <a href="#work">Film Work</a>
-          <a href="#about">About</a>
-          <a href="#socials">Socials</a>
-          <a href="#contact">Contact</a>
+          <a href="#work">🎬 Film Work</a>
+          <a href="#about">👋 About</a>
+          <a href="#socials">📱 Socials</a>
+          <a href="#contact">💌 Contact</a>
         </div>
         <div class="hero-socials">
           <a href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener" aria-label="Instagram — film">
@@ -575,32 +644,32 @@
     <section id="about">
       <div class="wrap about-grid">
         <div class="portrait" data-animate>
-          <span class="cap">Photo — swap in your own</span>
+          <img src="assets/pictures/annikalinkedinphoto.png" alt="Annika Aguila" loading="lazy" decoding="async">
         </div>
         <div class="about-copy" data-animate>
-          <span class="section-eyebrow">About</span>
-          <h2>Hi, I'm Annika.</h2>
-          <p class="lede">I make things that move — on screen, in a vase, and on the page.</p>
-          <p>I'm a director, cinematographer, and editor drawn to stories that sit somewhere between the personal and the observed — narrative shorts, PSAs, and brand films built from the ground up: shot list, camera, cut, and sound.</p>
-          <p>Outside the edit bay, I work across floral design, photography, and creative writing — different tools, same instinct: notice what's worth framing, then frame it well. <em>(Swap this paragraph for your own words — this is a placeholder bio.)</em></p>
+          <span class="section-eyebrow">👋 About</span>
+          <h2>Hi, I'm Annika. ✨</h2>
+          <p class="lede">I make things that move — on screen 🎬, in a vase 💐, and on the page 📝.</p>
+          <p>I'm a director, cinematographer, and editor drawn to stories that sit somewhere between the personal and the observed — narrative shorts, PSAs, and brand films built from the ground up: shot list, camera, cut, and sound. 🎥</p>
+          <p>Outside the edit bay, I work across floral design 🌸, photography 📷, and creative writing ✍️ — different tools, same instinct: notice what's worth framing, then frame it well. <em>(Swap this paragraph for your own words — this is a placeholder bio.)</em></p>
           <div class="skills-row">
-            <span class="skill-pill">Direction</span>
-            <span class="skill-pill">Cinematography</span>
-            <span class="skill-pill">Editing</span>
-            <span class="skill-pill">Sound Design</span>
-            <span class="skill-pill">Photography</span>
-            <span class="skill-pill">Floral Design</span>
+            <span class="skill-pill">🎬 Direction</span>
+            <span class="skill-pill">🎥 Cinematography</span>
+            <span class="skill-pill">✂️ Editing</span>
+            <span class="skill-pill">🎧 Sound Design</span>
+            <span class="skill-pill">📸 Photography</span>
+            <span class="skill-pill">🌸 Floral Design</span>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="band"><h2>Selected Work</h2></div>
+    <div class="band"><h2>🎬 Selected Work 🎬</h2></div>
 
     <section id="work">
       <div class="wrap">
         <div class="work-intro">
-          <p>Seven films, one instinct: find the real moment and hold the frame until it means something.</p>
+          <p>🎞️ Seven films, one instinct: find the real moment and hold the frame until it means something. ✨</p>
         </div>
 
         <div class="project" data-animate>
@@ -608,16 +677,16 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 2-5 5-5 8a5 5 0 0 0 10 0c0-3-2-6-5-8Z"/><path d="M9.5 12.5c0 1.5 1 2.5 2.5 2.5"/></svg>
             </span>
-            <span class="project-title">oh my gulay!</span>
+            <span class="project-title">🥬 oh my gulay!</span>
             <span class="project-year">2019</span>
           </div>
           <p class="project-roles">Director · Cinematographer · Editor</p>
           <p class="project-desc">Advertisement for a vegetarian subscription box.</p>
           <p class="project-highlight">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
-            Winner, Best Commercial — 2019 Entrepreneurship Competition
+            🏆 Winner, Best Commercial — 2019 Entrepreneurship Competition 🏆
           </p>
-          <span class="video-label">Video</span>
+          <span class="video-label">🎥 Video 🎬</span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
               <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/oh-my-gulay-1.mp4" type="video/mp4"></video>
@@ -639,11 +708,11 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12l-1.5 16h-9L6 4Z"/><path d="M9 4l1 3h4l1-3"/></svg>
             </span>
-            <span class="project-title">Pista</span>
+            <span class="project-title">🎉 Pista</span>
           </div>
           <p class="project-roles">Director · Cinematographer · Editor</p>
           <p class="project-desc">Fundraiser film for a Filipiniana shirt campaign.</p>
-          <span class="video-label">Video</span>
+          <span class="video-label">🎥 Video 🎬</span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
               <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/pista-1.mp4" type="video/mp4"></video>
@@ -665,11 +734,11 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </span>
-            <span class="project-title">Keep It Simple.</span>
+            <span class="project-title">🛍️ Keep It Simple.</span>
           </div>
           <p class="project-roles">Director · Cinematographer · Editor</p>
           <p class="project-desc">Narrative PSA addressing online shopping habits and waste reduction.</p>
-          <span class="video-label">Video</span>
+          <span class="video-label">🎥 Video 🎬</span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
               <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/keep-it-simple-1.mp4" type="video/mp4"></video>
@@ -691,11 +760,11 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17c3-6 6-9 8-9s5 3 8 9"/><circle cx="12" cy="8" r="2"/></svg>
             </span>
-            <span class="project-title">Contrivance</span>
+            <span class="project-title">😴 Contrivance</span>
           </div>
           <p class="project-roles">Cinematographer · Editor</p>
           <p class="project-desc">Experimental short about a boy's bizarre dream.</p>
-          <span class="video-label">Video</span>
+          <span class="video-label">🎥 Video 🎬</span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
               <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/contrivance-1.mp4" type="video/mp4"></video>
@@ -717,11 +786,11 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6h11l3 3v9H5z"/><path d="M9 11l6 5M15 11l-6 5"/></svg>
             </span>
-            <span class="project-title">Deleted</span>
+            <span class="project-title">🗑️ Deleted</span>
           </div>
           <p class="project-roles">Director · Cinematographer · Editor · Sound Design</p>
           <p class="project-desc">Social commentary on cancel culture, following a girl deleting photos with real-world consequences.</p>
-          <span class="video-label">Video</span>
+          <span class="video-label">🎥 Video 🎬</span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
               <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/deleted-1.mp4" type="video/mp4"></video>
@@ -743,11 +812,11 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 2 1 4 3 5s3-1 3 2-3 3-1 5 2 4-1 5-4-1-4-3 1-3-2-4-4 1-5-2 2-3 2-5-1-4 1-5 3 1 4-1Z"/></svg>
             </span>
-            <span class="project-title">Spiralling</span>
+            <span class="project-title">💊 Spiralling</span>
           </div>
           <p class="project-roles">Director · Cinematographer · Editor</p>
           <p class="project-desc">Experimental film exploring diet pill overdose.</p>
-          <span class="video-label">Video</span>
+          <span class="video-label">🎥 Video 🎬</span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
               <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/spiralling-1.mp4" type="video/mp4"></video>
@@ -769,11 +838,11 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
             </span>
-            <span class="project-title">ISM 100th Year</span>
+            <span class="project-title">🎊 ISM 100th Year</span>
           </div>
           <p class="project-roles">Editor</p>
           <p class="project-desc">Highlights video for International School Manila's centennial celebration.</p>
-          <span class="video-label">Video</span>
+          <span class="video-label">🎥 Video 🎬</span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
               <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/ism-100th-year-celebration-1.mp4" type="video/mp4"></video>
@@ -792,37 +861,37 @@
       </div>
     </section>
 
-    <div class="band"><h2>Elsewhere</h2></div>
+    <div class="band"><h2>🌍 Elsewhere 🌍</h2></div>
 
     <section id="socials">
       <div class="wrap">
         <div class="elsewhere-intro">
-          <p>Follow along, or say hello.</p>
+          <p>👋 Follow along, or say hello! 💬</p>
         </div>
         <div class="sheet" data-animate>
           <a class="frame" href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">
             <span class="icon-circle">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg>
             </span>
-            <h3>Film Reel</h3>
+            <h3>🎬 Film Reel</h3>
             <span class="handle">@annika_film</span>
-            <span class="go">View →</span>
+            <span class="go">View → ✨</span>
           </a>
           <a class="frame" href="https://www.instagram.com/annikaguila/?hl=en" target="_blank" rel="noopener">
             <span class="icon-circle">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg>
             </span>
-            <h3>Personal</h3>
+            <h3>📸 Personal</h3>
             <span class="handle">@annikaguila</span>
-            <span class="go">View →</span>
+            <span class="go">View → ✨</span>
           </a>
           <a class="frame" href="https://www.linkedin.com/in/annika-aguila/" target="_blank" rel="noopener">
             <span class="icon-circle">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7.2" y1="10" x2="7.2" y2="16.5"/><circle cx="7.2" cy="7" r="0.4" fill="currentColor"/><path d="M11 16.5v-4c0-1.4 1-2.5 2.4-2.5s2.3 1 2.3 2.5v4"/><line x1="11" y1="10" x2="11" y2="16.5"/></svg>
             </span>
-            <h3>LinkedIn</h3>
+            <h3>💼 LinkedIn</h3>
             <span class="handle">annika-aguila</span>
-            <span class="go">View →</span>
+            <span class="go">View → ✨</span>
           </a>
         </div>
       </div>
@@ -830,19 +899,19 @@
 
     <div class="band contact-band" id="contact">
       <div class="wrap">
-        <h2 class="script">Let's make something.</h2>
-        <p>Open to new projects — direction, cinematography, or an extra pair of hands in the edit bay.</p>
+        <h2 class="script">Let's make something. <span class="flame" aria-hidden="true">🔥</span></h2>
+        <p>🙌 Open to new projects — direction, cinematography, or an extra pair of hands in the edit bay. 🎥</p>
         <div class="cta-row">
-          <a class="btn solid" href="https://www.linkedin.com/in/annika-aguila/" target="_blank" rel="noopener">Message on LinkedIn</a>
-          <a class="btn" href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">DM on Instagram</a>
+          <a class="btn solid" href="https://www.linkedin.com/in/annika-aguila/" target="_blank" rel="noopener">💼 Message on LinkedIn</a>
+          <a class="btn" href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">📸 DM on Instagram</a>
         </div>
       </div>
     </div>
   </main>
 
   <footer class="wrap">
-    <span>© <span id="year"></span> Annika Aguila</span>
-    <span>Shot, cut &amp; coded by hand.</span>
+    <span>© <span id="year"></span> Annika Aguila 🎬</span>
+    <span>Shot, cut &amp; coded by hand. ✨</span>
   </footer>
 
 <script>
