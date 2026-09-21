@@ -4,7 +4,27 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>About — Annika Aguila</title>
-<meta name="description" content="About Annika Aguila — director, cinematographer &amp; storyteller." />
+<meta name="description" content="About Annika Aguila — marketing and social media, grounded in a filmmaker's eye for storytelling." />
+<link rel="canonical" href="https://annikaaguila.github.io/about.html">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Annika Aguila" />
+<meta property="og:title" content="About — Annika Aguila" />
+<meta property="og:description" content="About Annika Aguila — marketing and social media, grounded in a filmmaker's eye for storytelling." />
+<meta property="og:url" content="https://annikaaguila.github.io/about.html" />
+<meta property="og:image" content="https://annikaaguila.github.io/assets/icons/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="Portrait of Annika Aguila smiling, with a city skyline behind her" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="About — Annika Aguila" />
+<meta name="twitter:description" content="About Annika Aguila — marketing and social media, grounded in a filmmaker's eye for storytelling." />
+<meta name="twitter:image" content="https://annikaaguila.github.io/assets/icons/og-image.jpg" />
+<meta name="twitter:image:alt" content="Portrait of Annika Aguila smiling, with a city skyline behind her" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
@@ -12,21 +32,26 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#top">Skip to content</a>
+
   <header class="site-nav">
     <div class="wrap nav-inner">
       <a href="index.html#top" class="nav-name">Annika Aguila</a>
-      <nav class="links">
-        <a href="index.html#top">🏠 Home</a>
-        <a href="index.html#work">🎬 Work</a>
-        <a href="index.html#socials">📱 Socials</a>
-        <a href="index.html#photography">📷 Photos</a>
-        <a href="index.html#contact">💌 Contact</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links" aria-label="Menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+      <nav class="links" id="site-links" aria-label="Main">
+        <a href="index.html#top"><span aria-hidden="true">🏠</span> Home</a>
+        <a href="index.html#work"><span aria-hidden="true">🎬</span> Work</a>
+        <a href="index.html#socials"><span aria-hidden="true">📱</span> Socials</a>
+        <a href="index.html#photography"><span aria-hidden="true">📷</span> Photos</a>
+        <a href="index.html#contact"><span aria-hidden="true">💌</span> Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <div class="band"><h2>👋 About Me 👋</h2></div>
+  <main id="top" tabindex="-1">
+    <div class="band"><h2><span aria-hidden="true">👋</span> About Me <span aria-hidden="true">👋</span></h2></div>
 
     <section>
       <div class="wrap">
@@ -34,39 +59,43 @@
 
         <div class="about-grid">
           <div class="portrait" data-animate>
-            <img src="assets/pictures/annikalinkedinphoto.png" alt="Annika Aguila" loading="eager" decoding="async">
+            <picture>
+              <source srcset="assets/pictures/annika-portrait.webp" type="image/webp">
+              <img src="assets/pictures/annika-portrait.png" alt="Annika Aguila" width="800" height="800" loading="eager" decoding="async">
+            </picture>
           </div>
           <div class="about-copy" data-animate>
-            <span class="section-eyebrow">👋 About</span>
-            <h2>Hi, I'm Annika. ✨</h2>
-            <p class="lede">I make things that move — on screen 🎬, in a vase 💐, and on the page 📝.</p>
-            <p>I'm a director, cinematographer, and editor drawn to stories that sit somewhere between the personal and the observed — narrative shorts, PSAs, and brand films built from the ground up: shot list, camera, cut, and sound. 🎥</p>
-            <p>Outside the edit bay, I work across floral design 🌸, photography 📷, and creative writing ✍️ — different tools, same instinct: notice what's worth framing, then frame it well. <em>(Swap this paragraph for your own words — this is a placeholder bio.)</em></p>
+            <span class="section-eyebrow"><span aria-hidden="true">👋</span> About</span>
+            <h2>Hi, I'm Annika. <span aria-hidden="true">✨</span></h2>
+            <p class="lede">I make things that move — on screen <span aria-hidden="true">🎬</span>, in a vase <span aria-hidden="true">💐</span>, and on the page <span aria-hidden="true">📝</span>.</p>
+            <p>I work in marketing and social media, with a background as a director, cinematographer, and editor. I'm drawn to stories that sit somewhere between the personal and the observed — narrative shorts, PSAs, and brand films built from the ground up: shot list, camera, cut, and sound. <span aria-hidden="true">🎥</span></p>
+            <p>Outside the edit bay, I work across floral design <span aria-hidden="true">🌸</span>, photography <span aria-hidden="true">📷</span>, and creative writing <span aria-hidden="true">✍️</span> — different tools, same instinct: notice what's worth framing, then frame it well.</p>
             <div class="skills-row">
-              <span class="skill-pill">🎬 Direction</span>
-              <span class="skill-pill">🎥 Cinematography</span>
-              <span class="skill-pill">✂️ Editing</span>
-              <span class="skill-pill">🎧 Sound Design</span>
-              <span class="skill-pill">📸 Photography</span>
-              <span class="skill-pill">🌸 Floral Design</span>
+              <span class="skill-pill"><span aria-hidden="true">📱</span> Marketing + Social Media</span>
+              <span class="skill-pill"><span aria-hidden="true">🎬</span> Direction</span>
+              <span class="skill-pill"><span aria-hidden="true">🎥</span> Cinematography</span>
+              <span class="skill-pill"><span aria-hidden="true">✂️</span> Editing</span>
+              <span class="skill-pill"><span aria-hidden="true">🎧</span> Sound Design</span>
+              <span class="skill-pill"><span aria-hidden="true">📸</span> Photography</span>
+              <span class="skill-pill"><span aria-hidden="true">🌸</span> Floral Design</span>
             </div>
           </div>
         </div>
 
         <div class="about-extra" data-animate>
           <div>
-            <h3>🎬 Behind the Camera</h3>
+            <h3><span aria-hidden="true">🎬</span> Behind the Camera</h3>
             <p>Seven films in, my instinct is still the same one I started with: find the real moment and hold the frame until it means something — whether that's a narrative short, a PSA, or a brand film built from shot list to final mix.</p>
           </div>
           <div>
-            <h3>🌸 Off Camera</h3>
+            <h3><span aria-hidden="true">🌸</span> Off Camera</h3>
             <p>When I'm not in the edit bay, I'm usually arranging flowers, shooting stills on the street, or filling a notebook. Same eye, different tools — you can see some of that in the <a href="index.html#photography">Photography</a> section.</p>
           </div>
         </div>
 
         <div class="cta-row" style="margin-top: 48px;">
-          <a class="btn solid" href="index.html#work">🎬 See the Work</a>
-          <a class="btn outline" href="index.html#photography">📷 See the Photography</a>
+          <a class="btn solid" href="index.html#work"><span aria-hidden="true">🎬</span> See the Work</a>
+          <a class="btn outline" href="index.html#photography"><span aria-hidden="true">📷</span> See the Photography</a>
         </div>
       </div>
     </section>
@@ -74,10 +103,10 @@
     <div class="band contact-band" id="contact">
       <div class="wrap">
         <h2 class="script">Let's make something.</h2>
-        <p>🙌 Open to new projects — direction, cinematography, or an extra pair of hands in the edit bay. 🎥</p>
+        <p><span aria-hidden="true">🙌</span> Open to new projects — marketing and social media, plus direction, cinematography, or an extra pair of hands in the edit bay. <span aria-hidden="true">🎥</span></p>
         <div class="cta-row">
-          <a class="btn solid" href="https://www.linkedin.com/in/annika-aguila/" target="_blank" rel="noopener">💼 Message on LinkedIn</a>
-          <a class="btn" href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">📸 DM on Instagram</a>
+          <a class="btn solid" href="https://www.linkedin.com/in/annika-aguila/" target="_blank" rel="noopener"><span aria-hidden="true">💼</span> Message on LinkedIn</a>
+          <a class="btn" href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener"><span aria-hidden="true">📸</span> DM on Instagram</a>
         </div>
       </div>
     </div>
@@ -85,8 +114,8 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <span>© <span id="year"></span> Annika Aguila 🎬</span>
-      <span>Shot, cut &amp; coded by hand. ✨</span>
+      <span>© <span id="year"></span> Annika Aguila <span aria-hidden="true">🎬</span></span>
+      <span>Shot, cut &amp; coded by hand. <span aria-hidden="true">✨</span></span>
     </div>
   </footer>
 

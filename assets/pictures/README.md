@@ -1,13 +1,15 @@
 # Picture files
 
-Drop image files in this folder and reference them from `index.html` (hero
-photo, About portrait, Photography gallery).
+Reference images from `index.html` / `about.html` (hero photo, About portrait,
+Photography gallery).
 
-**TODO: compress the Photography gallery images.** They're currently full
-camera/export resolution (~37MB total as of the gallery launch), which is
-slow on mobile or a weak connection. Before adding more, resize the long
-edge to ~2000px and re-export as `.jpg` at ~80% quality — tools like
-ImageOptim, Squoosh, or `sips`/Handbrake-equivalent CLI all work. Aim for
-well under 1MB per image.
+**Naming:** lowercase kebab-case, no spaces or apostrophes.
 
-**Format:** `.jpg` or `.png`, whichever the source is — no need to convert.
+**Gallery photos:** resize the long edge to ~1600px and export as `.jpg` at
+~80-82% quality (progressive, keep the colour profile) before adding — aim for
+well under 300KB each. Then add `width`/`height` attributes matching the
+exported pixel size to the `<img>` so the layout doesn't shift while loading.
+`sips -Z 1600 in.jpg --out out.jpg` works for a quick resize.
+
+**Portrait:** `annika-portrait.webp` is served first (via `<picture>`);
+`annika-portrait.png` is the fallback for browsers without WebP.

@@ -3,8 +3,28 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Annika Aguila</title>
-<meta name="description" content="Director, cinematographer &amp; storyteller — portfolio of Annika Aguila." />
+<title>Annika Aguila — Marketing + Social Media</title>
+<meta name="description" content="Marketing and social media rooted in creativity and storytelling — client highlights, reels and photography by Annika Aguila." />
+<link rel="canonical" href="https://annikaaguila.github.io/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Annika Aguila" />
+<meta property="og:title" content="Annika Aguila — Marketing + Social Media" />
+<meta property="og:description" content="Marketing and social media rooted in creativity and storytelling — client highlights, reels and photography by Annika Aguila." />
+<meta property="og:url" content="https://annikaaguila.github.io/" />
+<meta property="og:image" content="https://annikaaguila.github.io/assets/icons/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="Portrait of Annika Aguila smiling, with a city skyline behind her" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Annika Aguila — Marketing + Social Media" />
+<meta name="twitter:description" content="Marketing and social media rooted in creativity and storytelling — client highlights, reels and photography by Annika Aguila." />
+<meta name="twitter:image" content="https://annikaaguila.github.io/assets/icons/og-image.jpg" />
+<meta name="twitter:image:alt" content="Portrait of Annika Aguila smiling, with a city skyline behind her" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
@@ -12,20 +32,25 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#top">Skip to content</a>
+
   <header class="site-nav">
     <div class="wrap nav-inner">
       <a href="#top" class="nav-name">Annika Aguila</a>
-      <nav class="links">
-        <a href="about.html">👋 About</a>
-        <a href="#work">🎬 Work</a>
-        <a href="#socials">📱 Socials</a>
-        <a href="#photography">📷 Photos</a>
-        <a href="#contact">💌 Contact</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links" aria-label="Menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+      <nav class="links" id="site-links" aria-label="Main">
+        <a href="about.html"><span aria-hidden="true">👋</span> About</a>
+        <a href="#work"><span aria-hidden="true">🎬</span> Work</a>
+        <a href="#socials"><span aria-hidden="true">📱</span> Socials</a>
+        <a href="#photography"><span aria-hidden="true">📷</span> Photos</a>
+        <a href="#contact"><span aria-hidden="true">💌</span> Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
     <div class="hero">
       <div class="hero-copy">
         <h1>Annika Aguila</h1>
@@ -44,11 +69,14 @@
         </div>
       </div>
       <div class="hero-photo">
-        <img src="assets/pictures/annikalinkedinphoto.png" alt="Annika Aguila" loading="eager" decoding="async" fetchpriority="high">
+        <picture>
+          <source srcset="assets/pictures/annika-portrait.webp" type="image/webp">
+          <img src="assets/pictures/annika-portrait.png" alt="Annika Aguila" width="800" height="800" loading="eager" decoding="async" fetchpriority="high">
+        </picture>
       </div>
     </div>
 
-    <div class="band"><h2 class="band-sm">🎬 Client Highlights 🎬</h2></div>
+    <div class="band"><h2 class="band-sm"><span aria-hidden="true">🎬</span> Client Highlights <span aria-hidden="true">🎬</span></h2></div>
 
     <section id="work">
       <div class="wrap">
@@ -57,23 +85,24 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 19h18L12 3Z"/><circle cx="11" cy="14" r="0.9" fill="currentColor" stroke="none"/><circle cx="14.5" cy="16.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="10" cy="17.5" r="0.9" fill="currentColor" stroke="none"/></svg>
             </span>
-            <span class="project-title">🍕 Joe's Pizza &amp; Pizza Zoo Party</span>
+            <span class="project-title"><span aria-hidden="true">🍕</span> Joe's Pizza &amp; Pizza Zoo Party</span>
+            <span class="project-year">2022</span>
           </div>
           <p class="project-roles">Made for Joe's Pizza Story Highlights</p>
           <p class="project-desc">Influencer partnerships and product seeding, fostering an engaged community through consistent interaction and brand voice development.</p>
-          <span class="video-label">🎥 Video 🎬</span>
+          <span class="video-label"><span aria-hidden="true">🎥</span> Video <span aria-hidden="true">🎬</span></span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
-              <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/joe's%20pizza/joe's%20pizza%20-%20williamsburg.MP4" type="video/mp4"></video>
-              <p class="video-empty">Coming soon<code>joe's pizza - williamsburg.MP4</code></p>
+              <video class="reel-video" controls preload="none" playsinline muted width="720" height="1280" poster="assets/videos/posters/joes-pizza-williamsburg.jpg" aria-label="Joe's Pizza Williamsburg reel"><source src="assets/videos/joes-pizza-williamsburg.mp4" type="video/mp4"></video>
+              <p class="video-empty" role="status">Video unavailable right now.<br>Watch on Instagram <a href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">@annika_film</a></p>
             </div></div></div>
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
-              <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/joe's%20pizza/joe's%20pizza%20-%20usq.M4V" type="video/mp4"></video>
-              <p class="video-empty">Coming soon<code>joe's pizza - usq.M4V</code></p>
+              <video class="reel-video" controls preload="none" playsinline muted width="720" height="1280" poster="assets/videos/posters/joes-pizza-usq.jpg" aria-label="Joe's Pizza USQ reel"><source src="assets/videos/joes-pizza-usq.mp4" type="video/mp4"></video>
+              <p class="video-empty" role="status">Video unavailable right now.<br>Watch on Instagram <a href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">@annika_film</a></p>
             </div></div></div>
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
-              <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/pizza%20zoo%20-%20r1d0.MP4" type="video/mp4"></video>
-              <p class="video-empty">Coming soon<code>pizza zoo - r1d0.MP4</code></p>
+              <video class="reel-video" controls preload="none" playsinline muted width="720" height="1280" poster="assets/videos/posters/pizza-zoo-r1d0.jpg" aria-label="Pizza Zoo Party reel"><source src="assets/videos/pizza-zoo-r1d0.mp4" type="video/mp4"></video>
+              <p class="video-empty" role="status">Video unavailable right now.<br>Watch on Instagram <a href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">@annika_film</a></p>
             </div></div></div>
           </div>
         </div>
@@ -83,13 +112,13 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4 5 7l2 2 2-1v11h6V8l2 1 2-2-3-3-2 2h-2L8 4Z"/></svg>
             </span>
-            <span class="project-title">🧥 Fashion Brand Reel</span>
+            <span class="project-title"><span aria-hidden="true">🧥</span> Fashion Brand Reel</span>
           </div>
-          <span class="video-label">🎥 Video 🎬</span>
+          <span class="video-label"><span aria-hidden="true">🎥</span> Video <span aria-hidden="true">🎬</span></span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
-              <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/nycgods_draft9.M4V" type="video/mp4"></video>
-              <p class="video-empty">Coming soon<code>nycgods_draft9.M4V</code></p>
+              <video class="reel-video" controls preload="none" playsinline muted width="720" height="1280" poster="assets/videos/posters/nycgods-draft9.jpg" aria-label="Fashion brand reel"><source src="assets/videos/nycgods-draft9.mp4" type="video/mp4"></video>
+              <p class="video-empty" role="status">Video unavailable right now.<br>Watch on Instagram <a href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">@annika_film</a></p>
             </div></div></div>
           </div>
         </div>
@@ -99,17 +128,17 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 4v1.2M12 18.8V20M4 12h1.2M18.8 12H20M6.3 6.3l.85.85M16.85 16.85l.85.85M6.3 17.7l.85-.85M16.85 7.15l.85-.85"/><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/></svg>
             </span>
-            <span class="project-title">🪩 NYC Clubbing</span>
+            <span class="project-title"><span aria-hidden="true">🪩</span> NYC Clubbing</span>
           </div>
-          <span class="video-label">🎥 Video 🎬</span>
+          <span class="video-label"><span aria-hidden="true">🎥</span> Video <span aria-hidden="true">🎬</span></span>
           <div class="project-videos">
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
-              <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/musica%20r7d0%20.MP4" type="video/mp4"></video>
-              <p class="video-empty">Coming soon<code>musica r7d0 .MP4</code></p>
+              <video class="reel-video" controls preload="none" playsinline muted width="720" height="1280" poster="assets/videos/posters/musica-r7d0.jpg" aria-label="NYC Clubbing reel, part 1"><source src="assets/videos/musica-r7d0.mp4" type="video/mp4"></video>
+              <p class="video-empty" role="status">Video unavailable right now.<br>Watch on Instagram <a href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">@annika_film</a></p>
             </div></div></div>
             <div class="phone"><div class="phone-screen"><div class="reel-video-slot">
-              <video class="reel-video" controls preload="metadata" playsinline muted><source src="assets/videos/club%20promo%20.M4V" type="video/mp4"></video>
-              <p class="video-empty">Coming soon<code>club promo .M4V</code></p>
+              <video class="reel-video" controls preload="none" playsinline muted width="1080" height="1920" poster="assets/videos/posters/club-promo.jpg" aria-label="NYC Clubbing reel, part 2"><source src="assets/videos/club-promo.mp4" type="video/mp4"></video>
+              <p class="video-empty" role="status">Video unavailable right now.<br>Watch on Instagram <a href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">@annika_film</a></p>
             </div></div></div>
           </div>
         </div>
@@ -119,16 +148,16 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 2-5 5-5 8a5 5 0 0 0 10 0c0-3-2-6-5-8Z"/><path d="M9.5 12.5c0 1.5 1 2.5 2.5 2.5"/></svg>
             </span>
-            <span class="project-title">🥬 Oh My Gulay!</span>
+            <span class="project-title"><span aria-hidden="true">🥬</span> Oh My Gulay!</span>
             <span class="project-year">2019</span>
           </div>
           <p class="project-roles">Director · Cinematographer · Editor</p>
           <p class="project-desc">Advertisement for a vegetarian subscription box.</p>
           <p class="project-highlight">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
-            🏆 Winner, Best Commercial — 2019 Entrepreneurship Competition 🏆
+            <span><span aria-hidden="true">🏆</span> Winner, Best Commercial — 2019 Entrepreneurship Competition <span aria-hidden="true">🏆</span></span>
           </p>
-          <span class="video-label">🎥 Video 🎬</span>
+          <span class="video-label"><span aria-hidden="true">🎥</span> Video <span aria-hidden="true">🎬</span></span>
           <div class="project-videos">
             <div class="yt-embed">
               <iframe src="https://www.youtube.com/embed/n5qwFFPuk2M" title="Oh My Gulay!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
@@ -141,11 +170,11 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12l-1.5 16h-9L6 4Z"/><path d="M9 4l1 3h4l1-3"/></svg>
             </span>
-            <span class="project-title">🎉 Pista</span>
+            <span class="project-title"><span aria-hidden="true">🎉</span> Pista</span>
           </div>
           <p class="project-roles">Director · Cinematographer · Editor</p>
           <p class="project-desc">Fundraiser film for a Filipiniana shirt campaign.</p>
-          <span class="video-label">🎥 Video 🎬</span>
+          <span class="video-label"><span aria-hidden="true">🎥</span> Video <span aria-hidden="true">🎬</span></span>
           <div class="project-videos">
             <div class="yt-embed">
               <iframe src="https://www.youtube.com/embed/tDs4epaDqWA" title="Pista" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
@@ -158,11 +187,11 @@
             <span class="project-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </span>
-            <span class="project-title">🛍️ Keep It Simple.</span>
+            <span class="project-title"><span aria-hidden="true">🛍️</span> Keep It Simple.</span>
           </div>
           <p class="project-roles">Director · Cinematographer · Editor</p>
           <p class="project-desc">Narrative PSA addressing online shopping habits and waste reduction.</p>
-          <span class="video-label">🎥 Video 🎬</span>
+          <span class="video-label"><span aria-hidden="true">🎥</span> Video <span aria-hidden="true">🎬</span></span>
           <div class="project-videos">
             <div class="yt-embed">
               <iframe src="https://www.youtube.com/embed/8uONaR-qH58" title="Keep It Simple." allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
@@ -172,79 +201,79 @@
       </div>
     </section>
 
-    <div class="band"><h2>🌍 Elsewhere 🌍</h2></div>
+    <div class="band"><h2><span aria-hidden="true">🌍</span> Elsewhere <span aria-hidden="true">🌍</span></h2></div>
 
     <section id="socials">
       <div class="wrap">
         <div class="elsewhere-intro">
-          <p>👋 Follow along, or say hello! 💬</p>
+          <p><span aria-hidden="true">👋</span> Follow along, or say hello! <span aria-hidden="true">💬</span></p>
         </div>
         <div class="sheet" data-animate>
           <a class="frame" href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">
             <span class="icon-circle">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg>
             </span>
-            <h3>🎬 Film Reel</h3>
+            <h3><span aria-hidden="true">🎬</span> Film Reel</h3>
             <span class="handle">@annika_film</span>
-            <span class="go">View → ✨</span>
+            <span class="go">View → <span aria-hidden="true">✨</span></span>
           </a>
           <a class="frame" href="https://www.instagram.com/annikaguila/?hl=en" target="_blank" rel="noopener">
             <span class="icon-circle">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg>
             </span>
-            <h3>📸 Personal</h3>
+            <h3><span aria-hidden="true">📸</span> Personal</h3>
             <span class="handle">@annikaguila</span>
-            <span class="go">View → ✨</span>
+            <span class="go">View → <span aria-hidden="true">✨</span></span>
           </a>
           <a class="frame" href="https://www.linkedin.com/in/annika-aguila/" target="_blank" rel="noopener">
             <span class="icon-circle">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7.2" y1="10" x2="7.2" y2="16.5"/><circle cx="7.2" cy="7" r="0.4" fill="currentColor"/><path d="M11 16.5v-4c0-1.4 1-2.5 2.4-2.5s2.3 1 2.3 2.5v4"/><line x1="11" y1="10" x2="11" y2="16.5"/></svg>
             </span>
-            <h3>💼 LinkedIn</h3>
+            <h3><span aria-hidden="true">💼</span> LinkedIn</h3>
             <span class="handle">annika-aguila</span>
-            <span class="go">View → ✨</span>
+            <span class="go">View → <span aria-hidden="true">✨</span></span>
           </a>
         </div>
       </div>
     </section>
 
-    <div class="band"><h2>📷 Photography 📷</h2></div>
+    <div class="band"><h2><span aria-hidden="true">📷</span> Photography <span aria-hidden="true">📷</span></h2></div>
 
     <section id="photography">
       <div class="wrap">
         <div class="elsewhere-intro">
-          <p>📸 A few frames from behind the other camera — portraits, edits, and street cats. 🐈</p>
+          <p><span aria-hidden="true">📸</span> A few frames from behind the other camera — portraits, edits, and street cats. <span aria-hidden="true">🐈</span></p>
         </div>
         <div class="gallery-grid" data-animate>
-          <a class="gallery-item" href="assets/pictures/DSC03437.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/DSC03437.jpg" alt="Portrait against a city skyline at dusk" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/dsc03437.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/dsc03437.jpg" srcset="assets/pictures/dsc03437-800.jpg 800w, assets/pictures/dsc03437.jpg 1067w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="Portrait against a city skyline at dusk" width="1067" height="1600" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" href="assets/pictures/!yuri1.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/!yuri1.jpg" alt="Portrait beside a wall covered in notes" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/yuri-1.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/yuri-1.jpg" srcset="assets/pictures/yuri-1-800.jpg 800w, assets/pictures/yuri-1.jpg 1600w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="Portrait beside a wall covered in notes" width="1600" height="1067" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" href="assets/pictures/aguila_photoshopped%20unit%203%20retake.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/aguila_photoshopped%20unit%203%20retake.jpg" alt="Stylized portrait wrapped in red fabric, digitally edited" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/aguila-photoshopped-unit-3-retake.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/aguila-photoshopped-unit-3-retake.jpg" srcset="assets/pictures/aguila-photoshopped-unit-3-retake-800.jpg 800w, assets/pictures/aguila-photoshopped-unit-3-retake.jpg 1067w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="Stylized portrait wrapped in red fabric, digitally edited" width="1067" height="1600" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" href="assets/pictures/!!%20catto.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/!!%20catto.jpg" alt="A street cat mid-stride" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/catto.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/catto.jpg" srcset="assets/pictures/catto-800.jpg 800w, assets/pictures/catto.jpg 1600w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="A street cat mid-stride" width="1600" height="1067" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" href="assets/pictures/aguila_edited1-762c5d45aae4484da5ce6d789c13caba.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/aguila_edited1-762c5d45aae4484da5ce6d789c13caba.jpg" alt="Close-up portrait against a leafy background" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/aguila-edited-1.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/aguila-edited-1.jpg" srcset="assets/pictures/aguila-edited-1-800.jpg 800w, assets/pictures/aguila-edited-1.jpg 1600w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="Close-up portrait against a leafy background" width="1600" height="1058" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" href="assets/pictures/anger3.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/anger3.jpg" alt="A street cat hissing at the camera" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/anger-3.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/anger-3.jpg" srcset="assets/pictures/anger-3-800.jpg 800w, assets/pictures/anger-3.jpg 1166w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="A street cat hissing at the camera" width="1166" height="1600" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" href="assets/pictures/aguila_edited2.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/aguila_edited2.jpg" alt="Portrait lit by a glass block window" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/aguila-edited-2.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/aguila-edited-2.jpg" srcset="assets/pictures/aguila-edited-2-800.jpg 800w, assets/pictures/aguila-edited-2.jpg 1600w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="Portrait lit by a glass block window" width="1600" height="1067" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" href="assets/pictures/pondering3.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/pondering3.jpg" alt="A street cat lying on the pavement" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/pondering-3.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/pondering-3.jpg" srcset="assets/pictures/pondering-3-800.jpg 800w, assets/pictures/pondering-3.jpg 1600w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="A street cat lying on the pavement" width="1600" height="1067" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" href="assets/pictures/aguila_edited3.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/aguila_edited3.jpg" alt="Portrait, part of an edited photo series" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/aguila-edited-3.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/aguila-edited-3.jpg" srcset="assets/pictures/aguila-edited-3-800.jpg 800w, assets/pictures/aguila-edited-3.jpg 1067w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="Portrait, part of an edited photo series" width="1067" height="1600" loading="lazy" decoding="async">
           </a>
-          <a class="gallery-item" href="assets/pictures/bodycontortion1.jpg" target="_blank" rel="noopener">
-            <img src="assets/pictures/bodycontortion1.jpg" alt="A calico cat stretching on the grass" loading="lazy" decoding="async">
+          <a class="gallery-item" href="assets/pictures/bodycontortion-1.jpg" target="_blank" rel="noopener">
+            <img src="assets/pictures/bodycontortion-1.jpg" srcset="assets/pictures/bodycontortion-1-800.jpg 800w, assets/pictures/bodycontortion-1.jpg 1067w" sizes="(max-width: 480px) calc(100vw - 48px), (max-width: 860px) calc((100vw - 66px) / 2), 332px" alt="A calico cat stretching on the grass" width="1067" height="1600" loading="lazy" decoding="async">
           </a>
         </div>
       </div>
@@ -253,10 +282,10 @@
     <div class="band contact-band" id="contact">
       <div class="wrap">
         <h2 class="script">Let's make something.</h2>
-        <p>🙌 Open to new projects — direction, cinematography, or an extra pair of hands in the edit bay. 🎥</p>
+        <p><span aria-hidden="true">🙌</span> Open to new projects — marketing and social media, plus direction, cinematography, or an extra pair of hands in the edit bay. <span aria-hidden="true">🎥</span></p>
         <div class="cta-row">
-          <a class="btn solid" href="https://www.linkedin.com/in/annika-aguila/" target="_blank" rel="noopener">💼 Message on LinkedIn</a>
-          <a class="btn" href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener">📸 DM on Instagram</a>
+          <a class="btn solid" href="https://www.linkedin.com/in/annika-aguila/" target="_blank" rel="noopener"><span aria-hidden="true">💼</span> Message on LinkedIn</a>
+          <a class="btn" href="https://www.instagram.com/annika_film/?hl=en" target="_blank" rel="noopener"><span aria-hidden="true">📸</span> DM on Instagram</a>
         </div>
       </div>
     </div>
@@ -264,17 +293,23 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <span>© <span id="year"></span> Annika Aguila 🎬</span>
-      <span>Shot, cut &amp; coded by hand. ✨</span>
+      <span>© <span id="year"></span> Annika Aguila <span aria-hidden="true">🎬</span></span>
+      <span>Shot, cut &amp; coded by hand. <span aria-hidden="true">✨</span></span>
     </div>
   </footer>
 
 <script src="common.js"></script>
 <script>
+  // Reels show their poster until played (preload="none"). Only a real load error
+  // swaps in the fallback message; any successful load clears it again.
   document.querySelectorAll('.reel-video-slot').forEach(function (slot) {
     var video = slot.querySelector('.reel-video');
-    video.addEventListener('loadedmetadata', function () { slot.classList.add('has-video'); });
-    video.addEventListener('error', function () { slot.classList.remove('has-video'); });
+    var fail = function () { slot.classList.add('failed'); };
+    var ok = function () { slot.classList.remove('failed'); };
+    video.addEventListener('error', fail);
+    video.querySelector('source').addEventListener('error', fail);
+    video.addEventListener('loadeddata', ok);
+    video.addEventListener('canplay', ok);
   });
 </script>
 
