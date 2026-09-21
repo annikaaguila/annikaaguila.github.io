@@ -23,6 +23,10 @@
 
   * { box-sizing: border-box; }
 
+  /* keep in-page anchors clear of the sticky header */
+  html { scroll-padding-top: 76px; }
+  @media (max-width: 760px) { html { scroll-padding-top: 64px; } }
+
   body {
     margin: 0;
     background: var(--cream);
@@ -148,7 +152,15 @@
   .nav-toggle[aria-expanded="true"] .bars::after { transform: translateY(-7px) rotate(-45deg); }
   .nav-toggle:hover, .nav-toggle:focus-visible { color: var(--rose); }
 
-  @media (max-width: 560px) {
+  @media (max-width: 960px) {
+    nav.links { gap: 20px; }
+  }
+  @media (max-width: 860px) {
+    nav.links { gap: 14px; letter-spacing: 0.1em; }
+    .nav-inner { gap: 28px; }
+  }
+
+  @media (max-width: 760px) {
     .nav-inner { padding-block: 8px; }
     .nav-toggle { display: grid; }
     nav.links {
@@ -177,7 +189,7 @@
   .hero {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 0.45fr;
+    grid-template-columns: 1fr 0.8fr;
     min-height: 360px;
     overflow: hidden;
   }
@@ -225,7 +237,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 18px;
-    padding: 56px 48px 56px 24px;
+    /* left edge lines up with the nav name / page content (wrap is 1080px) */
+    padding: 56px 48px 56px max(24px, calc((100vw - 1080px) / 2 + 24px));
   }
   .hero-copy h1 {
     font-family: var(--script);
@@ -426,6 +439,84 @@
     background: var(--rose);
     color: var(--olive-ink);
     border-color: var(--rose);
+  }
+
+  /* ---------- experience ---------- */
+  .job {
+    display: grid;
+    grid-template-columns: minmax(0, 230px) 1fr;
+    gap: 6px 44px;
+    padding-block: 34px;
+    border-top: 1px solid var(--line);
+  }
+  .job:first-child { border-top: 0; padding-top: 0; }
+  .job-meta p { margin: 0; }
+  .job-dates {
+    font-family: var(--display);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    color: var(--rose);
+    font-weight: 600;
+  }
+  .job-org {
+    font-family: var(--display);
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-dim);
+    margin-top: 6px !important;
+  }
+  .job-title {
+    font-family: var(--script);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 2.4vw, 1.95rem);
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .job-points { list-style: none; margin: 0; padding: 0; max-width: 68ch; }
+  .job-points li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    color: var(--ink-dim);
+  }
+  .job-points li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.78em;
+    width: 8px;
+    height: 1px;
+    background: var(--rose);
+  }
+  .job-points a { color: var(--rose-deep); text-underline-offset: 3px; }
+  .job-points a:hover, .job-points a:focus-visible { color: var(--rose); }
+  .exp-extra {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding-block: 26px;
+    display: grid;
+    gap: 12px;
+  }
+  .exp-extra p { margin: 0; color: var(--ink-dim); }
+  .exp-label {
+    display: block;
+    font-family: var(--display);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--teal);
+    margin-bottom: 2px;
+  }
+  .exp-when { font-family: var(--display); color: var(--rose); letter-spacing: 0.04em; margin-left: 6px; white-space: nowrap; }
+  @media (max-width: 720px) {
+    .job { grid-template-columns: 1fr; gap: 4px; padding-block: 28px; }
+    .job-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; }
+    .job-org { margin-top: 0 !important; }
+    .job-title { margin-top: 6px; }
   }
 
   /* ---------- work ---------- */

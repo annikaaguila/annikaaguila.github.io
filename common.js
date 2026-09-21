@@ -36,7 +36,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'Intersect
   document.addEventListener('click', function (e) {
     if (header.classList.contains('open') && !header.contains(e.target)) setOpen(false);
   });
-  window.matchMedia('(min-width: 561px)').addEventListener('change', function (e) {
+  window.matchMedia('(min-width: 761px)').addEventListener('change', function (e) {
     if (e.matches) setOpen(false);
   });
 })();
