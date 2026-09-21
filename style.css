@@ -804,6 +804,7 @@
     transition: background 0.15s ease, color 0.15s ease;
   }
   .btn:hover, .btn:focus-visible { background: var(--olive-ink); color: var(--olive); }
+  .btn-email { text-transform: none; letter-spacing: 0.04em; font-size: 0.95rem; }
   .btn.solid { background: var(--rose); border-color: var(--rose); color: var(--olive-ink); }
   .btn.solid:hover, .btn.solid:focus-visible { background: var(--rose-deep); color: var(--olive-ink); }
   .btn.outline { background: transparent; border-color: var(--ink-dim); color: var(--ink); }
