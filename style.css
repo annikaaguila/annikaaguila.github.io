@@ -697,7 +697,7 @@
   .phone {
     flex: 1 1 170px;
     max-width: 280px;
-    aspect-ratio: 9 / 19.5;
+    aspect-ratio: 9 / 16;
     background: #171512;
     border-radius: 22px;
     padding: 7px;
