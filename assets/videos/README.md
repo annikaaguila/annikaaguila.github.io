@@ -13,9 +13,9 @@ Every video also has a poster frame in `posters/` (same name, `.jpg`).
 | Fashion Brand Reel | `nycgods-draft9.mp4` |
 | NYC Clubbing | `musica-r7d0.mp4`, `club-promo.mp4`, `beneps.m4v`, `provost.m4v` |
 
-`beneps.m4v` and `provost.m4v` are wired in but still the original,
-unoptimized exports (no poster frame) — re-encode with the recipe below and
-add poster frames when ffmpeg is available.
+`beneps.m4v` and `provost.m4v` are wired in with poster frames, but the
+videos themselves are still the original, unoptimized exports — re-encode
+with the recipe below when ffmpeg is available.
 
 Other clips sitting in this folder (`DUMBO draft 5.M4V`,
 `otw2class DRAFT 1.M4V`) aren't wired into the site yet and are still the
