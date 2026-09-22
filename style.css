@@ -85,6 +85,12 @@
     background: rgba(250, 246, 238, 0.92);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--line);
+    transform: translateY(0);
+    transition: transform 0.25s ease;
+  }
+  header.site-nav.nav-hidden { transform: translateY(-100%); }
+  @media (prefers-reduced-motion: reduce) {
+    header.site-nav { transition: none; }
   }
   .nav-inner {
     display: flex;
@@ -334,6 +340,29 @@
     border-color: var(--ink);
   }
   .hero-socials svg { width: 18px; height: 18px; }
+
+  .hero-about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    margin-top: 4px;
+    font-family: var(--display);
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--rose-deep);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--line);
+    transition: color 0.15s ease, border-color 0.15s ease, gap 0.15s ease;
+  }
+  .hero-about-link:hover, .hero-about-link:focus-visible {
+    color: var(--rose);
+    border-color: var(--rose);
+    gap: 10px;
+  }
 
   @media (max-width: 860px) {
     .hero { grid-template-columns: 1fr; min-height: auto; }

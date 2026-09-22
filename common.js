@@ -40,3 +40,40 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'Intersect
     if (e.matches) setOpen(false);
   });
 })();
+
+// nav: hide on scroll down, reveal on scroll up
+(function () {
+  var header = document.querySelector('header.site-nav');
+  if (!header) return;
+  var lastY = window.scrollY;
+  var ticking = false;
+  var THRESHOLD = 8; // ignore tiny scroll jitter
+
+  function onScroll() {
+    var y = window.scrollY;
+    var delta = y - lastY;
+    var menuOpen = header.classList.contains('open');
+    var focusInside = header.contains(document.activeElement);
+    if (!menuOpen && !focusInside) {
+      if (y <= 0) {
+        header.classList.remove('nav-hidden');
+      } else if (delta > THRESHOLD) {
+        header.classList.add('nav-hidden');
+      } else if (delta < -THRESHOLD) {
+        header.classList.remove('nav-hidden');
+      }
+    }
+    lastY = y;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // always reveal if keyboard focus lands in the nav (e.g. tabbing to a link)
+  header.addEventListener('focusin', function () { header.classList.remove('nav-hidden'); });
+})();
