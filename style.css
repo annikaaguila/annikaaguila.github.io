@@ -772,58 +772,9 @@
     .portrait { max-width: 240px; }
   }
 
-  /* ---------- socials / elsewhere ---------- */
+  /* ---------- elsewhere intro (reused by photography) ---------- */
   .elsewhere-intro { text-align: center; max-width: 560px; margin: 0 auto 48px; }
   .elsewhere-intro p { color: var(--ink-dim); font-style: italic; }
-  .sheet {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-  }
-  .frame {
-    border: 1px solid var(--line);
-    background: var(--cream-2);
-    padding: 34px 26px;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    transition: background 0.15s ease, border-color 0.15s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .frame:hover, .frame:focus-visible {
-    background: #efe4d4;
-    border-color: var(--rose);
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 18px 30px -18px rgba(43, 38, 32, 0.3);
-  }
-  .frame .icon-circle {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    border: 1px solid var(--ink-dim);
-    display: grid;
-    place-items: center;
-    color: var(--ink);
-  }
-  .frame .icon-circle svg { width: 22px; height: 22px; }
-  .frame h3 { font-family: var(--script); font-weight: 600; font-size: 1.6rem; color: var(--ink); }
-  .frame .handle {
-    font-family: var(--display);
-    font-size: 0.88rem;
-    letter-spacing: 0.05em;
-    color: var(--rose);
-  }
-  .frame .go {
-    font-family: var(--display);
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-  }
-  @media (max-width: 720px) { .sheet { grid-template-columns: 1fr; } }
 
   /* ---------- photography ---------- */
   .gallery-grid {
@@ -958,7 +909,7 @@
     [data-animate] { opacity: 1; transform: none; transition: none; }
     .hero-photo img, .hero-copy h1, .flame { animation: none !important; }
     .hero-copy h1 { background: none; color: var(--ink); }
-    .portrait, .portrait img, .skill-pill, .project, .phone, .yt-embed, .frame, .gallery-item img,
+    .portrait, .portrait img, .skill-pill, .project, .phone, .yt-embed, .gallery-item img,
     .nav-toggle .bars, .nav-toggle .bars::before, .nav-toggle .bars::after {
       transition: none !important;
     }
