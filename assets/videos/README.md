@@ -11,12 +11,15 @@ Every video also has a poster frame in `posters/` (same name, `.jpg`).
 |---|---|
 | Joe's Pizza & Pizza Zoo Party | `joes-pizza-williamsburg.mp4`, `joes-pizza-usq.mp4`, `pizza-zoo-r1d0.mp4` |
 | Fashion Brand Reel | `nycgods-draft9.mp4` |
-| NYC Clubbing | `musica-r7d0.mp4`, `club-promo.mp4` |
+| NYC Clubbing | `musica-r7d0.mp4`, `club-promo.mp4`, `beneps.m4v`, `provost.m4v` |
 
-Other clips sitting in this folder (`! DRAFT 4.M4V`, `!DUMBO draft 5.M4V`,
-`musica r6d0.MP4` (earlier revision of the one used in NYC Clubbing),
-`otw2class DRAFT 1.M4V`, `provost_myfeeling_version3.M4V`) aren't wired into
-the site yet and are still the original, unoptimized exports.
+`beneps.m4v` and `provost.m4v` are wired in but still the original,
+unoptimized exports (no poster frame) — re-encode with the recipe below and
+add poster frames when ffmpeg is available.
+
+Other clips sitting in this folder (`DUMBO draft 5.M4V`,
+`otw2class DRAFT 1.M4V`) aren't wired into the site yet and are still the
+original, unoptimized exports.
 
 **Naming:** lowercase kebab-case, no spaces or apostrophes.
 
