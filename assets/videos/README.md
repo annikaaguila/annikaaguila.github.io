@@ -10,12 +10,14 @@ Every video also has a poster frame in `posters/` (same name, `.jpg`).
 | Project | Files |
 |---|---|
 | Joe's Pizza & Pizza Zoo Party | `joes-pizza-williamsburg.mp4`, `joes-pizza-usq.mp4`, `pizza-zoo-r1d0.mp4` |
-| Fashion Brand Reel | `nycgods-draft9.mp4` |
+| Fashion Brand Reel | `nycgods-draft9.mp4`, `gods-nyc-reel-2.mov` |
 | NYC Clubbing | `musica-r7d0.mp4`, `club-promo.mp4`, `beneps.m4v`, `provost.m4v` |
 
 `beneps.m4v` and `provost.m4v` are wired in with poster frames, but the
 videos themselves are still the original, unoptimized exports — re-encode
-with the recipe below when ffmpeg is available.
+with the recipe below when ffmpeg is available. `gods-nyc-reel-2.mov` is
+also wired in as the original export (no poster frame, .mov container —
+re-encode to .mp4 for broader browser support once ffmpeg is available).
 
 Other clips sitting in this folder (`DUMBO draft 5.M4V`,
 `otw2class DRAFT 1.M4V`) aren't wired into the site yet and are still the
