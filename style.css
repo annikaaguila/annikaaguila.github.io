@@ -622,7 +622,7 @@
     color: var(--ink-dim);
     margin: 12px 0 10px;
   }
-  .project-desc { color: var(--ink-dim); max-width: 56ch; margin: 0 0 10px; }
+  .project-desc { color: var(--ink-dim); margin: 0 0 10px; }
   .project-highlight {
     display: flex;
     align-items: center;
@@ -634,17 +634,37 @@
   }
   .project-highlight svg { width: 16px; height: 16px; flex: none; }
 
-  .video-label {
-    display: block;
-    font-family: var(--display);
-    font-size: 0.7rem;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--teal);
-    font-weight: 600;
-    margin: 18px 0 14px;
+  .highlight-covers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 20px;
   }
+  .highlight-cover {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .highlight-cover img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--line);
+  }
+  .highlight-cover span {
+    font-family: var(--display);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-dim);
+  }
+
   .project-videos {
+    margin-top: 24px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
