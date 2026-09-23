@@ -408,9 +408,9 @@
 
   @media (max-width: 860px) {
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-photo { height: 320px; }
+    .hero-photo { height: 320px; margin-top: 24px; }
     .hero-photo img { object-position: center 12%; }
-    .hero-copy { padding: 40px 24px; }
+    .hero-copy { padding: 40px 24px 16px; }
   }
 
   /* ---------- band ---------- */
