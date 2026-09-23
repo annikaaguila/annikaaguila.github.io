@@ -661,9 +661,9 @@
   }
   .highlight-cover img {
     display: block;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
+    width: 48px;
+    height: 85px;
+    border-radius: 9px;
     object-fit: cover;
     border: 1px solid var(--line);
   }
