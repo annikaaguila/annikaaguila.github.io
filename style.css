@@ -839,10 +839,21 @@
     font-size: clamp(2.2rem, 5vw, 3.2rem);
     margin-bottom: 22px;
   }
+  .contact-band .contact-eyebrow {
+    display: block;
+    color: rgba(244,239,226,0.7);
+    margin-bottom: 10px;
+  }
+  .contact-band h2.say-hi {
+    font-size: clamp(3.2rem, 9vw, 6rem);
+    margin-bottom: 18px;
+  }
   .contact-band p { color: rgba(244,239,226,0.75); font-style: italic; margin-bottom: 32px; }
+  .contact-band .btn.solid { margin-top: -8px; }
   @media (max-width: 400px) {
     .band h2 { letter-spacing: 0.18em; }
     .contact-band h2 { font-size: 2rem; }
+    .contact-band h2.say-hi { font-size: 2.8rem; }
   }
   .cta-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
   .btn {
