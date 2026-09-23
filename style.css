@@ -848,6 +848,13 @@
     font-size: clamp(3.2rem, 9vw, 6rem);
     margin-bottom: 18px;
   }
+  .contact-band h2.say-hi a {
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .contact-band h2.say-hi a:hover, .contact-band h2.say-hi a:focus-visible {
+    color: var(--rose);
+  }
   .contact-band p { color: rgba(244,239,226,0.75); font-style: italic; margin-bottom: 32px; }
   .contact-band .btn.solid { margin-top: -8px; }
   @media (max-width: 400px) {
