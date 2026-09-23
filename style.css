@@ -622,6 +622,17 @@
     color: var(--ink-dim);
     margin: 12px 0 10px;
   }
+  .project-roles a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.15s ease, color 0.15s ease;
+  }
+  .project-roles a:hover, .project-roles a:focus-visible {
+    color: var(--rose);
+    text-decoration-color: currentColor;
+  }
   .project-desc { color: var(--ink-dim); margin: 0 0 10px; }
   .project-highlight {
     display: flex;
