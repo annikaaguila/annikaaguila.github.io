@@ -126,6 +126,17 @@
     color: var(--rose);
     border-color: var(--rose);
   }
+  nav.links a.nav-contact {
+    background: var(--olive);
+    color: var(--olive-ink);
+    padding: 7px 14px 6px;
+    border-bottom-color: transparent;
+  }
+  nav.links a.nav-contact:hover, nav.links a.nav-contact:focus-visible {
+    background: var(--rose);
+    color: var(--olive-ink);
+    border-color: transparent;
+  }
   .nav-toggle {
     display: none;
     width: 44px;
