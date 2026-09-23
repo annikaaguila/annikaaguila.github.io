@@ -108,6 +108,7 @@
   }
   nav.links {
     display: flex;
+    align-items: center;
     gap: 26px;
     font-family: var(--display);
     font-size: 0.82rem;
