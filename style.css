@@ -16,6 +16,9 @@
     --script: "Cormorant Garamond", "Times New Roman", serif;
     --display: "Cormorant Garamond", "Times New Roman", serif;
     --body: "EB Garamond", Georgia, serif;
+    --op-sans: "Inter Tight", system-ui, -apple-system, sans-serif;
+    --op-serif: "Instrument Serif", Georgia, serif;
+    --op-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
 
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -959,4 +962,141 @@
     .nav-toggle .bars, .nav-toggle .bars::before, .nav-toggle .bars::after {
       transition: none !important;
     }
+  }
+
+  /* ---------- one-pager hero ---------- */
+  .op-hero {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 64px;
+    text-align: center;
+  }
+  .op-headline {
+    font-family: var(--op-sans);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    font-size: clamp(2.5rem, 8.6vw, 5.5rem);
+    margin: 0 0 28px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .op-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .op-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: var(--cream-2);
+    color: var(--ink);
+    text-decoration: none;
+    font-family: var(--op-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .op-pill svg { width: 16px; height: 16px; flex: none; }
+  .op-pill:hover, .op-pill:focus-visible { background: var(--rose); color: var(--olive-ink); }
+
+  .op-paragraph {
+    font-family: var(--op-sans);
+    font-weight: 400;
+    font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+    line-height: 1.55;
+    color: var(--ink-dim);
+    margin: 0 0 14px;
+  }
+  .op-paragraph em {
+    font-family: var(--op-serif);
+    font-style: italic;
+    color: var(--ink);
+    font-size: 1.15em;
+  }
+  .op-link {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--rose);
+    text-underline-offset: 3px;
+  }
+  .op-link:hover, .op-link:focus-visible { color: var(--rose-deep); text-decoration-color: var(--rose-deep); }
+  .op-punchy {
+    color: var(--ink);
+    font-weight: 600;
+    margin-top: 22px;
+    margin-bottom: 40px;
+  }
+
+  .op-photo {
+    margin: 0;
+    line-height: 0;
+  }
+  .op-photo picture, .op-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .op-photo img { border-radius: 28px 28px 0 0; }
+
+  .op-expect {
+    background: var(--cream-2);
+    border-radius: 0 0 28px 28px;
+    padding: 22px 28px 26px;
+    text-align: left;
+    margin-bottom: 36px;
+  }
+  .op-expect-label {
+    font-family: var(--op-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 0 0 12px;
+  }
+  .op-expect-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-block: 12px;
+    border-top: 1px solid var(--line);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .op-expect-row:first-of-type { border-top: none; padding-top: 0; }
+  .op-expect-term {
+    font-family: var(--op-mono);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    flex: none;
+    transition: color 0.15s ease;
+  }
+  .op-expect-sep { color: var(--ink-dim); font-family: var(--op-mono); flex: none; }
+  .op-expect-desc {
+    font-family: var(--op-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+  .op-expect-row:hover .op-expect-term, .op-expect-row:focus-visible .op-expect-term { color: var(--rose); }
+
+  .op-more-link { margin-top: 0; }
+
+  @media (max-width: 480px) {
+    .op-hero { padding: 40px 20px 48px; }
+    .op-expect { padding: 18px 20px 22px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .op-pill, .op-expect-row, .op-link { transition: none !important; }
   }
