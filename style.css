@@ -1100,3 +1100,129 @@
   @media (prefers-reduced-motion: reduce) {
     .op-pill, .op-expect-row, .op-link { transition: none !important; }
   }
+
+  /* ---------- my personality ---------- */
+  .personality-intro {
+    text-align: center;
+    color: var(--ink-dim);
+    max-width: 640px;
+    margin: 0 auto 36px;
+  }
+  .personality-lane { margin-bottom: 44px; }
+  .personality-lane:last-child { margin-bottom: 0; }
+  .personality-lane-title {
+    font-family: var(--display);
+    font-size: 0.85rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--teal);
+    margin: 0 0 18px;
+  }
+  .personality-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+  .personality-card {
+    flex: 1 1 170px;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .personality-phone { align-self: center; width: 100%; }
+
+  .personality-media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 16px;
+  }
+  .personality-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+  }
+  .personality-media.is-placeholder {
+    background: repeating-linear-gradient(
+      135deg,
+      rgba(244,239,226,0.05) 0px, rgba(244,239,226,0.05) 10px,
+      transparent 10px, transparent 20px
+    );
+  }
+  .personality-placeholder-badge {
+    font-family: var(--display);
+    font-size: 0.64rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin: 0;
+  }
+  .personality-placeholder-text {
+    font-family: var(--display);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: #b7ad98;
+    margin: 0;
+  }
+  .personality-watch-link {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    font-family: var(--display);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f4efe2;
+    background: rgba(23, 21, 18, 0.55);
+    padding: 8px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+  .personality-watch-link:hover, .personality-watch-link:focus-visible { color: #f0cfca; }
+
+  .personality-meta { text-align: center; }
+  .personality-title {
+    font-family: var(--script);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin: 0 0 4px;
+  }
+  .personality-sub {
+    font-family: var(--display);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 0 0 8px;
+  }
+  .personality-context, .personality-role, .personality-credit {
+    font-size: 0.88rem;
+    color: var(--ink-dim);
+    margin: 0 0 4px;
+  }
+  .personality-stats {
+    font-family: var(--display);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-dim);
+    margin: 8px 0 0;
+    border-top: 1px solid var(--line);
+    padding-top: 8px;
+  }
+  .personality-stats.is-pending { color: var(--rose); text-transform: uppercase; letter-spacing: 0.12em; }
+  .personality-stats-date { color: var(--ink-faint); }
+
+  @media (max-width: 480px) {
+    .personality-cards { justify-content: center; }
+  }
