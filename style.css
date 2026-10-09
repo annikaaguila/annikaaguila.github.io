@@ -873,7 +873,7 @@
     color: var(--rose);
   }
   .contact-band p { color: rgba(244,239,226,0.75); font-style: italic; margin-bottom: 32px; }
-  .contact-band .btn.solid { margin-top: -8px; }
+  .contact-band .cta-row { margin-top: -8px; }
   @media (max-width: 400px) {
     .band h2 { letter-spacing: 0.18em; }
     .contact-band h2 { font-size: 2rem; }
@@ -976,7 +976,7 @@
     font-weight: 800;
     letter-spacing: -0.04em;
     line-height: 1;
-    font-size: clamp(1rem, 3.4vw, 2.1rem);
+    font-size: clamp(1.9rem, 6.5vw, 3.2rem);
     margin: 0 0 28px;
     color: var(--ink);
     text-wrap: balance;
