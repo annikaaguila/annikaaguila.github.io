@@ -1044,7 +1044,11 @@
     width: 100%;
     height: auto;
   }
-  .op-photo img { border-radius: 28px 28px 0 0; }
+  .op-photo img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 28px 28px 0 0;
+  }
 
   .op-expect {
     background: var(--cream-2);
