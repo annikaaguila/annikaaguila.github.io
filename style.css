@@ -1045,8 +1045,9 @@
     height: auto;
   }
   .op-photo img {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
+    object-position: center top;
     border-radius: 28px 28px 0 0;
   }
 
